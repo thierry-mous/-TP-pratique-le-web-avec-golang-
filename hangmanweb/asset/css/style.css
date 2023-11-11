@@ -1,0 +1,18 @@
+.test{
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid;
+    width: 350px;
+}
+
+.ecriture{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.init{
+    display: flex;
+    justify-content: center;
+    border: 5px solid;
+}

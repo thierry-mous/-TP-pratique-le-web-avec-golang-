@@ -1,0 +1,30 @@
+{{define "display"}}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>info class</title>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+         <h1>Vos données personnelles</h1>
+         <div>
+            <p>Nom</p>
+            <p>{{.Nom}}</p>
+         </div>
+         <div>
+            <p>Prénom</p>
+            <p>{{.Prenom}}</p>
+         </div>
+         <div>
+            <p>Date de anniversaire</p>
+            <p>{{.Anniv}}</p>
+        </div>
+        <div>
+            <p>Sexe</p>
+            <p>{{.Sexe}}</p>
+        </div>
+    </body>
+</html>
+{{end}}

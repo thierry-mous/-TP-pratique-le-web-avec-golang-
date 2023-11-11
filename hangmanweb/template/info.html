@@ -1,0 +1,36 @@
+{{define "var"}}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>info class</title>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1>Informations sur la promotion</h1>
+            <p><b>Nom :</b>{{.Nom}}</p>
+            <p><b>Filière :</b>{{.Filière}}</p>
+            <p><b>Niveau :</b>{{.Niveau}}</p>
+            <p><b>Nombre d'étudiant :</b>{{.Nombre_d_étudiant}}</p>
+        </div> 
+        <h2>Liste des étudiants</h2>
+        {{range .ListeEtudiant}}
+        <div class="test">
+            <div class="ecriture">
+                <p> {{.NomE}} {{.NomFE}}</p>
+                <p>{{.Age}}</p>
+            </div>
+            <div>
+                {{if eq .Genre "homme"}}
+                    <img src="/static/image/Male_symbol_(fixed_width).svg.png" alt="symbole homme" width="100">
+                {{else}} 
+                    <img src="/static/image/femme.png" alt="symbole femme" width="100">
+                {{end}}
+            </div>
+        </div>
+        {{end}}
+    </body>
+</html>
+{{end}}
